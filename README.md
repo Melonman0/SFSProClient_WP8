@@ -1,8 +1,8 @@
 SFSProClient_WP8
 ================
 
-This is a Smart Fox Server Pro Client for Windows Phone 8. 
+This is a SmartFoxServer Pro Client for Windows Phone 8. 
 
-It is meant to be used as a plugin for Unity3d to export to Windows Phone 8, but it will probably work for other things as well.
+It's only been tested with Unity3d 4.3, but it'll probably work for other versions/programs as well.
 
-Based off the SilverLight Client API from gotoAndPlay().
+Written in C# and based off the SilverLight Client API from gotoAndPlay().
