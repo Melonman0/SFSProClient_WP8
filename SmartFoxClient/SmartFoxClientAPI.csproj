@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78E071C7-0603-4CB6-8449-DBD2A813C8A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartFoxClient</RootNamespace>
+    <AssemblyName>SmartFoxClient</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ReleaseVersion>1.2.4</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>SmartFoxClientAPI.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>SmartFoxClientAPI.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Buddy.cs" />
+    <Compile Include="Data\NewRoomDescriptor.cs" />
+    <Compile Include="Data\Room.cs" />
+    <Compile Include="Data\RoomVariable.cs" />
+    <Compile Include="Data\User.cs" />
+    <Compile Include="Data\Zone.cs" />
+    <Compile Include="Handlers\ExtHandler.cs" />
+    <Compile Include="Handlers\IMessageHandler.cs" />
+    <Compile Include="Handlers\SysHandler.cs" />
+    <Compile Include="Http\HttpConnection.cs" />
+    <Compile Include="Http\HttpEvent.cs" />
+    <Compile Include="Http\IHttpProtocolCodec.cs" />
+    <Compile Include="Http\RawProtocolCodec.cs" />
+    <Compile Include="Http\RequestState.cs" />
+    <Compile Include="litjson\IJsonWrapper.cs" />
+    <Compile Include="litjson\JsonData.cs" />
+    <Compile Include="litjson\JsonException.cs" />
+    <Compile Include="litjson\JsonMapper.cs" />
+    <Compile Include="litjson\JsonReader.cs" />
+    <Compile Include="litjson\JsonWriter.cs" />
+    <Compile Include="litjson\Lexer.cs" />
+    <Compile Include="litjson\ParserToken.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\SFSEvent.cs" />
+    <Compile Include="SmartFoxClient.cs" />
+    <Compile Include="Data\SFSObject.cs" />
+    <Compile Include="Util\SFSObjectSerializer.cs" />
+    <Compile Include="Util\SyncArrayList.cs" />
+    <Compile Include="Util\Entities.cs" />
+    <Compile Include="Util\MathUtil.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
